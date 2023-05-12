@@ -20,6 +20,7 @@ const postgresConfig = {
 export const DBInstance = new DataSource({
   ...postgresConfig,
   type: 'postgres',
+  ssl:true,
   synchronize: true,
   logging: false,
   entities: [User, AccessToken, RefreshToken, Team, Player],
